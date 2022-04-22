@@ -13,6 +13,7 @@
 		04B47ECB28134421008734C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B47EC928134421008734C2 /* Main.storyboard */; };
 		04B47ECD28134423008734C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ECC28134423008734C2 /* Assets.xcassets */; };
 		04B47ED028134423008734C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ECE28134423008734C2 /* LaunchScreen.storyboard */; };
+		04B47EDA2813453A008734C2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ED92813453A008734C2 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		04B47ECC28134423008734C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B47ECF28134423008734C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B47ED128134423008734C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B47ED92813453A008734C2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		04B47EC228134421008734C2 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
-				04B47EC328134421008734C2 /* AppDelegate.swift */,
-				04B47EC528134421008734C2 /* SceneDelegate.swift */,
+				04B47ED82813445A008734C2 /* Sistem */,
 				04B47EC728134421008734C2 /* ViewController.swift */,
-				04B47EC928134421008734C2 /* Main.storyboard */,
+				04B47ED72813443B008734C2 /* View */,
 				04B47ECC28134423008734C2 /* Assets.xcassets */,
-				04B47ECE28134423008734C2 /* LaunchScreen.storyboard */,
-				04B47ED128134423008734C2 /* Info.plist */,
+				04B47ED92813453A008734C2 /* .gitignore */,
 			);
 			path = GymApp;
+			sourceTree = "<group>";
+		};
+		04B47ED72813443B008734C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EC928134421008734C2 /* Main.storyboard */,
+				04B47ECE28134423008734C2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04B47ED82813445A008734C2 /* Sistem */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EC328134421008734C2 /* AppDelegate.swift */,
+				04B47EC528134421008734C2 /* SceneDelegate.swift */,
+				04B47ED128134423008734C2 /* Info.plist */,
+			);
+			path = Sistem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B47EDA2813453A008734C2 /* .gitignore in Resources */,
 				04B47ED028134423008734C2 /* LaunchScreen.storyboard in Resources */,
 				04B47ECD28134423008734C2 /* Assets.xcassets in Resources */,
 				04B47ECB28134421008734C2 /* Main.storyboard in Resources */,
@@ -291,7 +311,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZJ6JFW8X2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GymApp/Info.plist;
+				INFOPLIST_FILE = GymApp/Sistem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZJ6JFW8X2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GymApp/Info.plist;
+				INFOPLIST_FILE = GymApp/Sistem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
