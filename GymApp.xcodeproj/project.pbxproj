@@ -14,6 +14,15 @@
 		04B47ECD28134423008734C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ECC28134423008734C2 /* Assets.xcassets */; };
 		04B47ED028134423008734C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ECE28134423008734C2 /* LaunchScreen.storyboard */; };
 		04B47EDA2813453A008734C2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 04B47ED92813453A008734C2 /* .gitignore */; };
+		04B47EDE28135188008734C2 /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EDD28135188008734C2 /* ExercisesViewController.swift */; };
+		04B47EE128135477008734C2 /* CellSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EE028135477008734C2 /* CellSegmentedControl.swift */; };
+		04B47EE32813550E008734C2 /* CellForExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EE22813550E008734C2 /* CellForExercises.swift */; };
+		04B47EE628136428008734C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EE528136428008734C2 /* Model.swift */; };
+		04B47EE928136BF4008734C2 /* DataForBreast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EE828136BF4008734C2 /* DataForBreast.swift */; };
+		04B47EEB281371C9008734C2 /* DataForBiceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EEA281371C9008734C2 /* DataForBiceps.swift */; };
+		04B47EEE28137224008734C2 /* DataForTriceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EED28137224008734C2 /* DataForTriceps.swift */; };
+		04B47EF02813724D008734C2 /* DataForBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EEF2813724D008734C2 /* DataForBack.swift */; };
+		04B47EF228137268008734C2 /* DataForLegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EF128137268008734C2 /* DataForLegs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		04B47ECF28134423008734C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B47ED128134423008734C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B47ED92813453A008734C2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		04B47EDD28135188008734C2 /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		04B47EE028135477008734C2 /* CellSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSegmentedControl.swift; sourceTree = "<group>"; };
+		04B47EE22813550E008734C2 /* CellForExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForExercises.swift; sourceTree = "<group>"; };
+		04B47EE528136428008734C2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		04B47EE828136BF4008734C2 /* DataForBreast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForBreast.swift; sourceTree = "<group>"; };
+		04B47EEA281371C9008734C2 /* DataForBiceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForBiceps.swift; sourceTree = "<group>"; };
+		04B47EED28137224008734C2 /* DataForTriceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForTriceps.swift; sourceTree = "<group>"; };
+		04B47EEF2813724D008734C2 /* DataForBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForBack.swift; sourceTree = "<group>"; };
+		04B47EF128137268008734C2 /* DataForLegs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForLegs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +76,12 @@
 		04B47EC228134421008734C2 /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
-				04B47ED82813445A008734C2 /* Sistem */,
-				04B47EC728134421008734C2 /* ViewController.swift */,
+				04B47EEC281371D4008734C2 /* DataManages */,
+				04B47EE728136535008734C2 /* Models */,
+				04B47EDF281351B3008734C2 /* ViewControllers */,
 				04B47ED72813443B008734C2 /* View */,
 				04B47ECC28134423008734C2 /* Assets.xcassets */,
+				04B47ED82813445A008734C2 /* Sistem */,
 				04B47ED92813453A008734C2 /* .gitignore */,
 			);
 			path = GymApp;
@@ -84,6 +104,45 @@
 				04B47ED128134423008734C2 /* Info.plist */,
 			);
 			path = Sistem;
+			sourceTree = "<group>";
+		};
+		04B47EDF281351B3008734C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EE4281363BD008734C2 /* CellsVC */,
+				04B47EC728134421008734C2 /* ViewController.swift */,
+				04B47EDD28135188008734C2 /* ExercisesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04B47EE4281363BD008734C2 /* CellsVC */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EE22813550E008734C2 /* CellForExercises.swift */,
+				04B47EE028135477008734C2 /* CellSegmentedControl.swift */,
+			);
+			path = CellsVC;
+			sourceTree = "<group>";
+		};
+		04B47EE728136535008734C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EE528136428008734C2 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04B47EEC281371D4008734C2 /* DataManages */ = {
+			isa = PBXGroup;
+			children = (
+				04B47EE828136BF4008734C2 /* DataForBreast.swift */,
+				04B47EEA281371C9008734C2 /* DataForBiceps.swift */,
+				04B47EED28137224008734C2 /* DataForTriceps.swift */,
+				04B47EEF2813724D008734C2 /* DataForBack.swift */,
+				04B47EF128137268008734C2 /* DataForLegs.swift */,
+			);
+			path = DataManages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +217,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B47EF228137268008734C2 /* DataForLegs.swift in Sources */,
+				04B47EF02813724D008734C2 /* DataForBack.swift in Sources */,
+				04B47EE628136428008734C2 /* Model.swift in Sources */,
 				04B47EC828134421008734C2 /* ViewController.swift in Sources */,
 				04B47EC428134421008734C2 /* AppDelegate.swift in Sources */,
+				04B47EDE28135188008734C2 /* ExercisesViewController.swift in Sources */,
+				04B47EEB281371C9008734C2 /* DataForBiceps.swift in Sources */,
+				04B47EE128135477008734C2 /* CellSegmentedControl.swift in Sources */,
+				04B47EEE28137224008734C2 /* DataForTriceps.swift in Sources */,
 				04B47EC628134421008734C2 /* SceneDelegate.swift in Sources */,
+				04B47EE928136BF4008734C2 /* DataForBreast.swift in Sources */,
+				04B47EE32813550E008734C2 /* CellForExercises.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
