@@ -38,7 +38,7 @@ class ExercisesControllerNew: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if numberOfSelected == 0 { return exerciseBiceps.count }
+        if numberOfSelected == 0 { return exerciseBreast.count + exerciseTriceps.count}
         if numberOfSelected == 1 { return exerciseLegs.count }
         if numberOfSelected == 2 { return exerciseBack.count }
         return 0
@@ -48,9 +48,17 @@ class ExercisesControllerNew: UIViewController, UITableViewDelegate, UITableView
         if numberOfSelected == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
             tableView.rowHeight = 80
-            let text = exerciseBiceps[indexPath.row].description
+            
+            if indexPath.row < exerciseBreast.count {
+                let text = exerciseBreast[indexPath.row].description
+                cell.textLabel?.text = text
+                return cell
+            } else {
+                let number = indexPath.row - exerciseBreast.count
+            let text = exerciseTriceps[number].description
             cell.textLabel?.text = text
             return cell
+        }
         }
         
         if numberOfSelected == 1 {
