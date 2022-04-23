@@ -7,80 +7,80 @@
 
 import UIKit
 
-class ExercisesControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class ExercisesControllerNew: UIViewController {
     
     @IBOutlet var mainTableView: UITableView!
-    let exerciseTriceps = Exercise.getExercise(muscle: .triceps)
-    let exerciseBiceps = Exercise.getExercise(muscle: .biceps)
-    let exerciseLegs = Exercise.getExercise(muscle: .legs)
-    let exerciseBack = Exercise.getExercise(muscle: .back)
-    let exerciseBreast = Exercise.getExercise(muscle: .breast)
     
-    //    Счетчик для положения segmentControl
+    let exercises = DataManage().exercises
+    var selectedExercises = [Exercise]()
+
     var numberOfSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeExercise(muscles: [.breast, .triceps])
+        mainTableView.rowHeight = 80
     }
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            numberOfSelected = 0
-            mainTableView.reloadData()
-        } else if sender.selectedSegmentIndex == 1 {
-            numberOfSelected = 1
-            mainTableView.reloadData()
-        } else {
-            numberOfSelected = 2
-            mainTableView.reloadData()
+        numberOfSelected = sender.selectedSegmentIndex
+        selectExercise()
+        mainTableView.reloadData()
+    }
+    
+    private func changeExercise(muscles: [MuscleGroup])  {
+        selectedExercises.removeAll()
+        
+        for muscle in muscles {
+            for exercise in exercises {
+                if exercise.muscle == muscle {
+                    selectedExercises.append(exercise)
+                }
+            }
         }
     }
     
+    private func selectExercise() {
+        switch numberOfSelected {
+        case 1:
+            changeExercise(muscles: [.back, .biceps])
+        case 2:
+            changeExercise(muscles: [.legs])
+        default :
+            changeExercise(muscles: [.breast, .triceps])
+        }
+    }
+    
+}
+
+extension ExercisesControllerNew: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if numberOfSelected == 0 { return exerciseBreast.count + exerciseTriceps.count}
-        if numberOfSelected == 1 { return exerciseLegs.count }
-        if numberOfSelected == 2 { return exerciseBack.count }
-        return 0
+        selectedExercises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if numberOfSelected == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
-            tableView.rowHeight = 80
-            
-            if indexPath.row < exerciseBreast.count {
-                let text = exerciseBreast[indexPath.row].description
-                cell.textLabel?.text = text
-                return cell
-            } else {
-                let number = indexPath.row - exerciseBreast.count
-            let text = exerciseTriceps[number].description
-            cell.textLabel?.text = text
-            return cell
-        }
-        }
-        
-        if numberOfSelected == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
-            tableView.rowHeight = 80
-            let text = exerciseLegs[indexPath.row].description
-            cell.textLabel?.text = text
-            return cell
-        }
-        
-        if numberOfSelected == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
-            tableView.rowHeight = 80
-            let text = exerciseBack[indexPath.row].description
-            cell.textLabel?.text = text
-            return cell
-        }
-        
-        // Заглушка для return
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
+        
+        let exercises = selectedExercises[indexPath.row]
+        
+        var content = cell.defaultContentConfiguration()
+        content.textProperties.color = customColor()
+        content.secondaryTextProperties.color = .gray
+        content.text = exercises.description
+        content.secondaryText = exercises.numberOfRepetitions
+        content.image = UIImage(named: exercises.image)
+        cell.contentConfiguration = content
+        
         return cell
     }
     
 }
 
+extension ExercisesControllerNew {
+    func customColor() -> UIColor {
+        UIColor(red: 0/255, green: 169/255, blue: 209/255, alpha: 1)
+    }
+}
