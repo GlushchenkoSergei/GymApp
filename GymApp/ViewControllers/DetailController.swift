@@ -8,24 +8,32 @@
 import UIKit
 
 class DetailController: UIViewController {
-
+    
     @IBOutlet var image: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     
-    var exercises: Exercise!
+    var exercise: Exercise!
+    var delegate: ExercisesControllerProtocol!
     
     var indicatorButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(exercises.description)")
-        image.image = UIImage(named: exercises.image)
-        nameLabel.text = exercises.description
+        print("\(exercise.description)")
+        image.image = UIImage(named: exercise.image)
+        nameLabel.text = exercise.description
     }
     
    
     @IBAction func tapDone(_ sender: UIButton) {
+        
+        saveExercise()
     
+    }
+    
+    private func saveExercise() {
+        delegate.saveExercise(exercise: exercise)
+        
     }
     
     func changeColorCell() {
