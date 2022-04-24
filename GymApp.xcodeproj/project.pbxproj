@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049049F72815C15600FA738C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049049F62815C15600FA738C /* SettingsViewController.swift */; };
 		04ABEF8A28154A150019530E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABEF8928154A150019530E /* DetailController.swift */; };
 		04B47EC428134421008734C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EC328134421008734C2 /* AppDelegate.swift */; };
 		04B47EC628134421008734C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EC528134421008734C2 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049049F62815C15600FA738C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04ABEF8928154A150019530E /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		04B47EC028134421008734C2 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B47EC328134421008734C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				04B47EC728134421008734C2 /* ViewController.swift */,
 				04E04F812813FBF2002DCA15 /* ExercisesControllerNew.swift */,
 				04ABEF8928154A150019530E /* DetailController.swift */,
+				049049F62815C15600FA738C /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				04B47EC428134421008734C2 /* AppDelegate.swift in Sources */,
 				04E04F842814026A002DCA15 /* DataManage.swift in Sources */,
 				04B47EC628134421008734C2 /* SceneDelegate.swift in Sources */,
+				049049F72815C15600FA738C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
