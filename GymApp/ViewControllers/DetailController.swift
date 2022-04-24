@@ -12,8 +12,9 @@ class DetailController: UIViewController {
     @IBOutlet var image: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     
-    
     var exercises: Exercise!
+    
+    var indicatorButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,14 @@ class DetailController: UIViewController {
         nameLabel.text = exercises.description
     }
     
-    @IBAction func tapDone(_ sender: Any) {
+   
+    @IBAction func tapDone(_ sender: UIButton) {
+    
     }
     
-  
+    func changeColorCell() {
+        
+    }
+    
 }
+
