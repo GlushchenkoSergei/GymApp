@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol ExercisesControllerProtocol {
+    func saveExercise(exercise: Exercise)
+}
 
-class ExercisesControllerNew: UIViewController {
+class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     @IBOutlet var mainTableView: UITableView!
     
     let exercises = DataManage().exercises
     var selectedExercises = [Exercise]()
+    var exercisesForSaved = [Exercise]()
 
     var numberOfSelected = 0
     
@@ -52,6 +56,14 @@ class ExercisesControllerNew: UIViewController {
         }
     }
     
+    func saveExercise(exercise: Exercise) {
+        exercisesForSaved.append(exercise)
+    }
+    
+    func addExerciseToJournal() {
+        // здесь надо реализовать метод сохранения в журнал
+    }
+    
    // действие по нажатию (отмена выделения)
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -62,7 +74,8 @@ class ExercisesControllerNew: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailController else { return }
         guard let indexPath = mainTableView.indexPathForSelectedRow else { return }
-        detailVC.exercises = selectedExercises[indexPath.row]
+        detailVC.exercise = selectedExercises[indexPath.row]
+        detailVC.delegate = self
     }
     
 }
