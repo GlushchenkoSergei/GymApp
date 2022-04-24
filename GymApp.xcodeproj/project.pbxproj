@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04ABEF8A28154A150019530E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ABEF8928154A150019530E /* DetailController.swift */; };
 		04B47EC428134421008734C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EC328134421008734C2 /* AppDelegate.swift */; };
 		04B47EC628134421008734C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EC528134421008734C2 /* SceneDelegate.swift */; };
 		04B47EC828134421008734C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B47EC728134421008734C2 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04ABEF8928154A150019530E /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		04B47EC028134421008734C2 /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B47EC328134421008734C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B47EC528134421008734C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				04B47EC728134421008734C2 /* ViewController.swift */,
 				04E04F812813FBF2002DCA15 /* ExercisesControllerNew.swift */,
+				04ABEF8928154A150019530E /* DetailController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ABEF8A28154A150019530E /* DetailController.swift in Sources */,
 				04B47EE628136428008734C2 /* Model.swift in Sources */,
 				04E04F822813FBF2002DCA15 /* ExercisesControllerNew.swift in Sources */,
 				04B47EC828134421008734C2 /* ViewController.swift in Sources */,

@@ -253,6 +253,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="QpA-yH-qMW" kind="show" identifier="goToDetail" id="7ow-Cq-bff"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -273,14 +276,110 @@
                             <constraint firstItem="pcX-Kg-Xc5" firstAttribute="leading" secondItem="Bm3-dE-IjW" secondAttribute="leading" id="sNU-7Q-yzJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Types of muscle groups" id="KqU-6l-amW"/>
+                    <navigationItem key="navigationItem" title="Types of muscle groups" id="KqU-6l-amW">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="cMY-7L-AVV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="i80-Se-Yp4">
+                                <rect key="frame" x="324" y="5" width="70" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.095212109389999994" green="0.1994627118" blue="0.23530745510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.25110173229999999" green="0.53580307959999995" blue="0.63140708209999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapDone:" destination="QpA-yH-qMW" eventType="touchUpInside" id="ba0-7D-YbV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="pcX-Kg-Xc5" id="eXb-0i-sFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByP-qg-lJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2330" y="-540"/>
+            <point key="canvasLocation" x="2241" y="-540"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="n9U-xa-HQw">
+            <objects>
+                <viewController id="QpA-yH-qMW" customClass="DetailController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oLP-KC-JaO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage2" translatesAutoresizingMaskIntoConstraints="NO" id="zn2-vx-u42">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunges" translatesAutoresizingMaskIntoConstraints="NO" id="dSY-fB-NYS">
+                                <rect key="frame" x="37" y="140" width="340" height="349"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaj-fi-lV4">
+                                <rect key="frame" x="134" y="831" width="146" height="31"/>
+                                <color key="backgroundColor" red="0.2254374623" green="0.47716462609999999" blue="0.56081473829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выполнил"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapDone:" destination="QpA-yH-qMW" eventType="touchUpInside" id="H3A-V0-UFd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohP-ue-SaL">
+                                <rect key="frame" x="37" y="499" width="340" height="23"/>
+                                <color key="tintColor" red="0.28032949569999999" green="0.5944413543" blue="0.70199918750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.37282348708171181" green="0.78946267837484563" blue="0.9304852594292613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yW4-zT-eKQ">
+                                <rect key="frame" x="20" y="530" width="374" height="248"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.28032949569999999" green="0.5944413543" blue="0.70199918750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Zo-Gg-N9W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zn2-vx-u42" firstAttribute="top" secondItem="oLP-KC-JaO" secondAttribute="top" id="0pf-j6-7Ok"/>
+                            <constraint firstItem="yW4-zT-eKQ" firstAttribute="height" secondItem="zn2-vx-u42" secondAttribute="height" multiplier="0.276786" id="3Gh-dP-4Lu"/>
+                            <constraint firstItem="ohP-ue-SaL" firstAttribute="leading" secondItem="5Zo-Gg-N9W" secondAttribute="leading" constant="37" id="3Qx-EO-Sjs"/>
+                            <constraint firstItem="zn2-vx-u42" firstAttribute="leading" secondItem="5Zo-Gg-N9W" secondAttribute="leading" id="7PH-H1-dGP"/>
+                            <constraint firstItem="yW4-zT-eKQ" firstAttribute="leading" secondItem="5Zo-Gg-N9W" secondAttribute="leading" constant="20" id="CA8-yF-1OR"/>
+                            <constraint firstAttribute="bottom" secondItem="zn2-vx-u42" secondAttribute="bottom" id="EA9-3g-Uve"/>
+                            <constraint firstItem="5Zo-Gg-N9W" firstAttribute="trailing" secondItem="yW4-zT-eKQ" secondAttribute="trailing" constant="20" id="Ef5-b7-jzX"/>
+                            <constraint firstItem="ohP-ue-SaL" firstAttribute="top" secondItem="dSY-fB-NYS" secondAttribute="bottom" constant="10" id="K06-5A-971"/>
+                            <constraint firstItem="yW4-zT-eKQ" firstAttribute="top" secondItem="ohP-ue-SaL" secondAttribute="bottom" constant="8" symbolic="YES" id="Sk0-FA-scJ"/>
+                            <constraint firstItem="Jaj-fi-lV4" firstAttribute="width" secondItem="zn2-vx-u42" secondAttribute="width" multiplier="0.352657" id="cCQ-s5-br2"/>
+                            <constraint firstItem="dSY-fB-NYS" firstAttribute="leading" secondItem="5Zo-Gg-N9W" secondAttribute="leading" constant="37" id="lB0-dI-vJV"/>
+                            <constraint firstItem="dSY-fB-NYS" firstAttribute="height" secondItem="zn2-vx-u42" secondAttribute="height" multiplier="0.389509" id="lgb-Ha-uMv"/>
+                            <constraint firstItem="Jaj-fi-lV4" firstAttribute="centerX" secondItem="oLP-KC-JaO" secondAttribute="centerX" id="pkZ-zX-r7i"/>
+                            <constraint firstItem="zn2-vx-u42" firstAttribute="trailing" secondItem="5Zo-Gg-N9W" secondAttribute="trailing" id="r3F-tb-7Z3"/>
+                            <constraint firstItem="5Zo-Gg-N9W" firstAttribute="trailing" secondItem="ohP-ue-SaL" secondAttribute="trailing" constant="37" id="rvQ-eT-N3C"/>
+                            <constraint firstItem="dSY-fB-NYS" firstAttribute="top" secondItem="5Zo-Gg-N9W" secondAttribute="top" id="tFB-gJ-AZA"/>
+                            <constraint firstItem="5Zo-Gg-N9W" firstAttribute="bottom" secondItem="Jaj-fi-lV4" secondAttribute="bottom" id="vhQ-N0-K0N"/>
+                            <constraint firstItem="5Zo-Gg-N9W" firstAttribute="trailing" secondItem="dSY-fB-NYS" secondAttribute="trailing" constant="37" id="wt0-H0-EV1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ECy-EH-dQZ"/>
+                    <connections>
+                        <outlet property="image" destination="dSY-fB-NYS" id="gIn-1O-2k2"/>
+                        <outlet property="nameLabel" destination="ohP-ue-SaL" id="HmP-Ap-Lss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGg-NI-lAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2941" y="-540"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y5p-Z4-3S4">
@@ -321,8 +420,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage2" width="1151" height="2048"/>
         <image name="firstExample" width="986" height="964"/>
         <image name="forCollection" width="1151" height="2048"/>
+        <image name="lunges" width="904" height="906"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

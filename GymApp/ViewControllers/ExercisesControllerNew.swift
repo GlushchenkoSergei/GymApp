@@ -52,6 +52,19 @@ class ExercisesControllerNew: UIViewController {
         }
     }
     
+   // действие по нажатию (отмена выделения)
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailController else { return }
+        guard let indexPath = mainTableView.indexPathForSelectedRow else { return }
+        detailVC.exercises = selectedExercises[indexPath.row]
+    }
+    
 }
 
 extension ExercisesControllerNew: UITableViewDelegate, UITableViewDataSource {
@@ -61,7 +74,6 @@ extension ExercisesControllerNew: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         let cell = tableView.dequeueReusableCell(withIdentifier: "showExercises", for: indexPath)
         
         let exercises = selectedExercises[indexPath.row]
@@ -84,3 +96,5 @@ extension ExercisesControllerNew {
         UIColor(red: 0/255, green: 169/255, blue: 209/255, alpha: 1)
     }
 }
+
+
