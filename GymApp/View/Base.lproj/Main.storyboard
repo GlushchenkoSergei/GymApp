@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="szw-cL-cPJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="szw-cL-cPJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -207,23 +207,23 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="olX-nw-7aF">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="255"/>
                                                 <subviews>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-KN-Fs9">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-KN-Fs9" customClass="MuscleSwitch" customModule="GymApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.35783582930000002" green="0.77015131709999995" blue="0.92554271219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </switch>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-fP-nsG">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-fP-nsG" customClass="MuscleSwitch" customModule="GymApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="56" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.3572354709546377" green="0.76756096671881702" blue="0.92580591066919193" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </switch>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46M-Fc-vgR">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46M-Fc-vgR" customClass="MuscleSwitch" customModule="GymApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="112" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.35783582930000002" green="0.77015131709999995" blue="0.92554271219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </switch>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-b4-XbC">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQF-b4-XbC" customClass="MuscleSwitch" customModule="GymApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="168" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.35783582930000002" green="0.77015131709999995" blue="0.92554271219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </switch>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eI2-Z9-gVO">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eI2-Z9-gVO" customClass="MuscleSwitch" customModule="GymApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="224" width="51" height="31"/>
                                                         <color key="onTintColor" red="0.35783582930000002" green="0.77015131709999995" blue="0.92554271219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </switch>
@@ -261,6 +261,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapSaveButton" destination="5V0-N9-N3h" eventType="touchUpInside" id="7VS-ce-9Wp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Mm-5H-dCe"/>
@@ -295,11 +298,11 @@
                     <connections>
                         <outlet property="numberOfStepper" destination="dvR-3Q-0RU" id="UfT-Us-9Qh"/>
                         <outlet property="outletSegmentControl" destination="33c-cU-gAg" id="Qty-dD-35s"/>
-                        <outlet property="switchBack" destination="yQF-b4-XbC" id="2Kh-qz-PEo"/>
-                        <outlet property="switchBiceps" destination="LDq-fP-nsG" id="sDq-lb-oQd"/>
-                        <outlet property="switchBreast" destination="vcj-KN-Fs9" id="NSp-AR-yci"/>
-                        <outlet property="switchLegs" destination="eI2-Z9-gVO" id="nYc-JZ-lHr"/>
-                        <outlet property="switchTriceps" destination="46M-Fc-vgR" id="CI7-WK-ye8"/>
+                        <outletCollection property="MuscleSwitches" destination="vcj-KN-Fs9" collectionClass="NSMutableArray" id="XcO-K5-3Sk"/>
+                        <outletCollection property="MuscleSwitches" destination="LDq-fP-nsG" collectionClass="NSMutableArray" id="jcD-Ku-szX"/>
+                        <outletCollection property="MuscleSwitches" destination="46M-Fc-vgR" collectionClass="NSMutableArray" id="sib-pC-ksN"/>
+                        <outletCollection property="MuscleSwitches" destination="yQF-b4-XbC" collectionClass="NSMutableArray" id="TWx-Vh-38r"/>
+                        <outletCollection property="MuscleSwitches" destination="eI2-Z9-gVO" collectionClass="NSMutableArray" id="H47-I6-RxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lva-LF-e0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

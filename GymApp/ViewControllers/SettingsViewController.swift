@@ -14,15 +14,23 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet var outletSegmentControl: UISegmentedControl!
     
-    @IBOutlet var switchBreast: UISwitch!
-    @IBOutlet var switchBiceps: UISwitch!
-    @IBOutlet var switchTriceps: UISwitch!
-    @IBOutlet var switchBack: UISwitch!
-    @IBOutlet var switchLegs: UISwitch!
+//    @IBOutlet var switchBreast: UISwitch!
+//    @IBOutlet var switchBiceps: UISwitch!
+//    @IBOutlet var switchTriceps: UISwitch!
+//    @IBOutlet var switchBack: UISwitch!
+//    @IBOutlet var switchLegs: UISwitch!
+    
+    @IBOutlet var MuscleSwitches: [MuscleSwitch]!
+    var muscleGroup: [MuscleGroup]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        MuscleSwitches[0].type = .breast
+        MuscleSwitches[1].type = .biceps
+        MuscleSwitches[2].type = .triceps
+        MuscleSwitches[3].type = .back
+        MuscleSwitches[4].type = .legs
     }
     
   
@@ -47,6 +55,17 @@ class SettingsViewController: UIViewController {
     
     @IBAction func segmentControl(_ sender: Any) {
         
+    }
+    
+    @IBAction func tapSaveButton() {
+    }
+    private func setupMuscleGroup() {
+        muscleGroup.removeAll()
+        for muscleSwitch in MuscleSwitches {
+            if muscleSwitch.isOn {
+                muscleGroup.append(muscleSwitch.type)
+            }
+        }
     }
     
 }
