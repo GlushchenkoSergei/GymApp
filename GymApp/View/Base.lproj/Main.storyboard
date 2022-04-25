@@ -245,7 +245,7 @@
                                     <segment title="Three"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentControl:" destination="5V0-N9-N3h" eventType="valueChanged" id="9Fg-h0-n3q"/>
+                                    <action selector="segmentControl:" destination="5V0-N9-N3h" eventType="valueChanged" id="MyH-wV-ujR"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueg-C3-Gr2">

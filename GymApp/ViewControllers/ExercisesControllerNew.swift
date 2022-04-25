@@ -15,6 +15,8 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     @IBOutlet var mainTableView: UITableView!
     
+    private var userDefaults = UserDefaults.standard
+    
     let exercises = DataManage.shared.exercises
     var selectedExercises = [Exercise]()
     var exercisesForSaved = [Exercise]()
@@ -29,7 +31,10 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         numberOfSelected = sender.selectedSegmentIndex
-        selectExercise()
+        guard let titleSegment = sender.titleForSegment(at: numberOfSelected) else { return }
+        let muscleGroup = userDefaults.value(forKey: titleSegment)
+        changeExercise(muscles: muscleGroup as! [MuscleGroup])
+//        selectExercise()
         mainTableView.reloadData()
     }
     
@@ -45,16 +50,16 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
         }
     }
     
-    private func selectExercise() {
-        switch numberOfSelected {
-        case 1:
-            changeExercise(muscles: [.back, .biceps])
-        case 2:
-            changeExercise(muscles: [.legs])
-        default :
-            changeExercise(muscles: [.breast, .triceps])
-        }
-    }
+//    private func selectExercise() {
+//        switch numberOfSelected {
+//        case 1:
+//            changeExercise(muscles: [.back, .biceps])
+//        case 2:
+//            changeExercise(muscles: [.legs])
+//        default :
+//            changeExercise(muscles: [.breast, .triceps])
+//        }
+//    }
     
     func saveExercise(exercise: Exercise) {
         exercisesForSaved.append(exercise)

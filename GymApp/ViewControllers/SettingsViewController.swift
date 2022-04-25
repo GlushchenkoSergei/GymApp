@@ -8,6 +8,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    let userDefaults = UserDefaults.standard
 
     @IBOutlet var numberOfStepper: UILabel!
 //    @IBOutlet var defaultStepper: UIStepper!
@@ -21,6 +23,7 @@ class SettingsViewController: UIViewController {
 //    @IBOutlet var switchLegs: UISwitch!
     
     @IBOutlet var MuscleSwitches: [MuscleSwitch]!
+    
     var muscleGroup: [MuscleGroup]!
     
     override func viewDidLoad() {
@@ -58,7 +61,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func tapSaveButton() {
+        let currentSegment = outletSegmentControl.selectedSegmentIndex
+        guard let titleCurrenSegment = outletSegmentControl.titleForSegment(at: currentSegment) else { return }
+        userDefaults.setValue(muscleGroup, forKey: titleCurrenSegment)
     }
+    
     private func setupMuscleGroup() {
         muscleGroup.removeAll()
         for muscleSwitch in MuscleSwitches {
