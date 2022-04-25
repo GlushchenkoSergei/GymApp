@@ -33,11 +33,15 @@ class DetailController: UIViewController {
     
     private func saveExercise() {
         delegate.saveExercise(exercise: exercise)
+        showAlert(with: "In next update", and: "Скоро релиз ф-ци дневника")
         
     }
     
-    func changeColorCell() {
-        
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
     
 }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Firls Controller-->
         <scene sceneID="m7u-R9-y7A">
             <objects>
-                <viewController id="uaF-KP-MCW" customClass="ViewController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uaF-KP-MCW" customClass="FirlsController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cu4-CJ-gtD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-oP-sgg">
                                         <rect key="frame" x="0.0" y="97" width="354" height="38"/>
-                                        <color key="backgroundColor" red="0.28032949569999999" green="0.5944413543" blue="0.70199918750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="tintColor" red="0.064106382429999997" green="0.09774351865" blue="0.1176536158" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -55,6 +55,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="buttonDiary:" destination="uaF-KP-MCW" eventType="touchUpInside" id="8x7-J1-wXI"/>
                                             <segue destination="13n-uL-ne3" kind="presentation" id="lSY-Yz-4g3"/>
                                         </connections>
                                     </button>
@@ -236,7 +237,7 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="33c-cU-gAg">
-                                <rect key="frame" x="50" y="269.5" width="314" height="32"/>
+                                <rect key="frame" x="0.0" y="269.5" width="414" height="32"/>
                                 <color key="backgroundColor" red="0.68605271477013541" green="0.80533127254329884" blue="0.88189811176111121" alpha="0.27920198756337955" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="First"/>
@@ -267,7 +268,7 @@
                         <constraints>
                             <constraint firstItem="v6z-tP-gNW" firstAttribute="height" secondItem="B2c-3B-oKd" secondAttribute="height" multiplier="0.0440835" id="1Kn-Nu-Tc7"/>
                             <constraint firstItem="ueg-C3-Gr2" firstAttribute="width" secondItem="v6z-tP-gNW" secondAttribute="width" id="902-po-CKQ"/>
-                            <constraint firstItem="33c-cU-gAg" firstAttribute="leading" secondItem="0Mm-5H-dCe" secondAttribute="leading" constant="50" id="AA0-gQ-zq9"/>
+                            <constraint firstItem="33c-cU-gAg" firstAttribute="leading" secondItem="0Mm-5H-dCe" secondAttribute="leading" id="AA0-gQ-zq9"/>
                             <constraint firstItem="v6z-tP-gNW" firstAttribute="centerX" secondItem="mYM-w8-VWV" secondAttribute="centerX" id="BoE-kq-xAQ"/>
                             <constraint firstItem="ZJ6-rX-uv8" firstAttribute="top" secondItem="0Mm-5H-dCe" secondAttribute="top" constant="30" id="C0V-VA-tMI"/>
                             <constraint firstItem="ZJ6-rX-uv8" firstAttribute="leading" secondItem="hy6-7f-3l5" secondAttribute="trailing" constant="8" symbolic="YES" id="Dih-V0-dQA"/>
@@ -279,7 +280,7 @@
                             <constraint firstItem="ueg-C3-Gr2" firstAttribute="centerX" secondItem="mYM-w8-VWV" secondAttribute="centerX" id="b0J-l1-VC9"/>
                             <constraint firstItem="fAi-Zn-3ht" firstAttribute="centerY" secondItem="mYM-w8-VWV" secondAttribute="centerY" id="ceY-zR-0LZ"/>
                             <constraint firstItem="fAi-Zn-3ht" firstAttribute="top" secondItem="33c-cU-gAg" secondAttribute="bottom" constant="20" id="iEZ-uw-oZz"/>
-                            <constraint firstItem="33c-cU-gAg" firstAttribute="trailing" secondItem="0Mm-5H-dCe" secondAttribute="trailing" constant="-50" id="iMP-iZ-APg"/>
+                            <constraint firstItem="33c-cU-gAg" firstAttribute="trailing" secondItem="0Mm-5H-dCe" secondAttribute="trailing" id="iMP-iZ-APg"/>
                             <constraint firstItem="ZJ6-rX-uv8" firstAttribute="width" secondItem="B2c-3B-oKd" secondAttribute="height" multiplier="47:431" id="kvK-uM-Mwf"/>
                             <constraint firstItem="v6z-tP-gNW" firstAttribute="top" secondItem="ueg-C3-Gr2" secondAttribute="bottom" constant="8" symbolic="YES" id="qOs-CN-gBh"/>
                             <constraint firstItem="0Mm-5H-dCe" firstAttribute="trailing" secondItem="ZJ6-rX-uv8" secondAttribute="trailing" constant="20" id="r4a-5m-BiY"/>
@@ -308,13 +309,13 @@
         <!--Root View Controller-->
         <scene sceneID="zS4-iF-40g">
             <objects>
-                <tableViewController id="ed0-X2-lPp" sceneMemberID="viewController">
+                <tableViewController id="ed0-X2-lPp" customClass="LibraryController" customModule="GymApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="i0e-f5-DmZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="30r-fq-5YV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="library" id="30r-fq-5YV">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="30r-fq-5YV" id="y1M-C8-ity">
@@ -332,7 +333,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6r-Fv-ZMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3100" y="869"/>
+            <point key="canvasLocation" x="3025" y="876"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gNX-aC-v1w">
@@ -349,7 +350,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p91-JQ-Kuj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346" y="869"/>
+            <point key="canvasLocation" x="2286" y="869"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qUz-i9-x8s">
@@ -481,7 +482,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaj-fi-lV4">
                                 <rect key="frame" x="134" y="831" width="146" height="31"/>
-                                <color key="backgroundColor" red="0.2254374623" green="0.47716462609999999" blue="0.56081473829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Выполнил"/>

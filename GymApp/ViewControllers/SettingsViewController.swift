@@ -30,14 +30,12 @@ class SettingsViewController: UIViewController {
         let correctValue = Int(sender.value + 1)
         guard let valueBeforeUpdate = Int(numberOfStepper.text ?? "") else { return }
         
-        
         if valueBeforeUpdate > correctValue {
             outletSegmentControl.removeSegment(at: correctValue, animated: true)
         }
-        
         if  correctValue > valueBeforeUpdate {
             if sender.value == 1 {
-                outletSegmentControl.insertSegment(withTitle: "Second", at: Int(sender.value), animated: true)
+                outletSegmentControl.insertSegment(withTitle: "Second", at: 1, animated: true)
             } else {
                 outletSegmentControl.insertSegment(withTitle: "Three", at: 2, animated: true)
             }

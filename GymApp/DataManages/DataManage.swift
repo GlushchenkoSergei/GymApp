@@ -9,6 +9,8 @@ import Foundation
 
 class DataManage {
     
+    static let shared = DataManage()
+    
     var exercises: [Exercise] = [
         Exercise(description: "Жим штанги на ровной скамье", image: "benchPress", numberOfRepetitions: "10 x 4", muscle: .breast),
         Exercise(description: "Жим штанги на скамье с уклоном в верх", image: "benchPressN", numberOfRepetitions: "10 x 4", muscle: .breast),
@@ -31,7 +33,8 @@ class DataManage {
         Exercise(description: "Сведение ног в тренажере", image: "003", numberOfRepetitions: "Индивидуально", muscle: .legs),
         Exercise(description: "Подъемы на носке", image: "002", numberOfRepetitions: "20 х 4", muscle: .legs)
     ]
-
+    
+    private init() {}
 }
 
 

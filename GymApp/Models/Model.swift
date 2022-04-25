@@ -20,5 +20,5 @@ enum MuscleGroup {
     case triceps
     case breast
     case back
-    case legs
+    case legs 
 }

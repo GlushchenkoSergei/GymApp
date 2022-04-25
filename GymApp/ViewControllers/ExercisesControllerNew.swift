@@ -15,7 +15,7 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     @IBOutlet var mainTableView: UITableView!
     
-    let exercises = DataManage().exercises
+    let exercises = DataManage.shared.exercises
     var selectedExercises = [Exercise]()
     var exercisesForSaved = [Exercise]()
 
