@@ -15,10 +15,10 @@ struct Exercise {
     let muscle: MuscleGroup
 }
 
-enum MuscleGroup {
-    case biceps
-    case triceps
-    case breast
-    case back
-    case legs 
+enum MuscleGroup: String {
+    case biceps = "Бицепс"
+    case triceps = "Трицепс"
+    case breast = "Грудь"
+    case back = "Спина"
+    case legs = "Ноги"
 }

@@ -15,7 +15,8 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     @IBOutlet var mainTableView: UITableView!
     
-    private var userDefaults = UserDefaults.standard
+    @IBOutlet weak var sc: UISegmentedControl!
+    private let userDefaults = UserDefaults.standard
     
     let exercises = DataManage.shared.exercises
     var selectedExercises = [Exercise]()
@@ -30,12 +31,21 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     }
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
-        numberOfSelected = sender.selectedSegmentIndex
-        guard let titleSegment = sender.titleForSegment(at: numberOfSelected) else { return }
-        let muscleGroup = userDefaults.value(forKey: titleSegment)
-        changeExercise(muscles: muscleGroup as! [MuscleGroup])
-//        selectExercise()
+        
+        selectExercise()
         mainTableView.reloadData()
+    }
+    
+    private func selectExercise() {
+        guard let titleSegment = sc.titleForSegment(at: sc.selectedSegmentIndex) else { return }
+        print(userDefaults.array(forKey: titleSegment))
+        let muscleGroupStrings = userDefaults.array(forKey: titleSegment) as! [String]
+        var muscleGroup = [MuscleGroup]()
+        for muscle in muscleGroupStrings {
+            muscleGroup.append(MuscleGroup(rawValue: muscle)!)
+        }
+        print(muscleGroup)
+        changeExercise(muscles: muscleGroup)
     }
     
     private func changeExercise(muscles: [MuscleGroup])  {

@@ -9,15 +9,15 @@ import UIKit
 
 class FirlsController: UIViewController {
    
-    private var userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userDefaults.value(forKey: "First") == nil {
-            userDefaults.setValue([MuscleGroup.back, MuscleGroup.biceps], forKey: "First")
-            userDefaults.setValue([MuscleGroup.legs], forKey: "Second")
-            userDefaults.setValue([MuscleGroup.breast, MuscleGroup.triceps], forKey: "Three")
+        if userDefaults.array(forKey: "First") == nil {
+            userDefaults.setValue(["Спина", "Бицепс"], forKey: "First")
+            userDefaults.setValue(["Ноги"], forKey: "Second")
+            userDefaults.setValue(["Грудь", "Трицепс"], forKey: "Three")
         }
         // Эта считай проверка первого запуска, установить дефолтные настройки отображения
         

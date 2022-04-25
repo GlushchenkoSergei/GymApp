@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    let userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.standard
 
     @IBOutlet var numberOfStepper: UILabel!
 //    @IBOutlet var defaultStepper: UIStepper!
@@ -22,18 +22,22 @@ class SettingsViewController: UIViewController {
 //    @IBOutlet var switchBack: UISwitch!
 //    @IBOutlet var switchLegs: UISwitch!
     
-    @IBOutlet var MuscleSwitches: [MuscleSwitch]!
+    @IBOutlet var muscleSwitches: [MuscleSwitch]!
     
-    var muscleGroup: [MuscleGroup]!
+    private var muscleGroup = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MuscleSwitches[0].type = .breast
-        MuscleSwitches[1].type = .biceps
-        MuscleSwitches[2].type = .triceps
-        MuscleSwitches[3].type = .back
-        MuscleSwitches[4].type = .legs
+        muscleSwitches[0].type = .breast
+        muscleSwitches[1].type = .biceps
+        muscleSwitches[2].type = .triceps
+        muscleSwitches[3].type = .back
+        muscleSwitches[4].type = .legs
+        
+        selectSegment()
+        
+        
     }
     
   
@@ -57,20 +61,34 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func segmentControl(_ sender: Any) {
-        
+        selectSegment()
+    }
+    
+    private func selectSegment() {
+        let currentSegment = outletSegmentControl.selectedSegmentIndex
+        guard let titleCurrenSegment = outletSegmentControl.titleForSegment(at: currentSegment) else { return }
+        let currentMuscle = userDefaults.array(forKey: titleCurrenSegment) as! [String]
+        for muscleSwitch in muscleSwitches {
+            if currentMuscle.contains(muscleSwitch.type.rawValue) {
+                muscleSwitch.isOn = true
+            } else {
+                muscleSwitch.isOn = false
+            }
+        }
     }
     
     @IBAction func tapSaveButton() {
         let currentSegment = outletSegmentControl.selectedSegmentIndex
         guard let titleCurrenSegment = outletSegmentControl.titleForSegment(at: currentSegment) else { return }
+        setupMuscleGroup()
         userDefaults.setValue(muscleGroup, forKey: titleCurrenSegment)
     }
     
     private func setupMuscleGroup() {
         muscleGroup.removeAll()
-        for muscleSwitch in MuscleSwitches {
+        for muscleSwitch in muscleSwitches {
             if muscleSwitch.isOn {
-                muscleGroup.append(muscleSwitch.type)
+                muscleGroup.append(muscleSwitch.type.rawValue)
             }
         }
     }

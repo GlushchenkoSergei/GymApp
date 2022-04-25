@@ -298,11 +298,11 @@
                     <connections>
                         <outlet property="numberOfStepper" destination="dvR-3Q-0RU" id="UfT-Us-9Qh"/>
                         <outlet property="outletSegmentControl" destination="33c-cU-gAg" id="Qty-dD-35s"/>
-                        <outletCollection property="MuscleSwitches" destination="vcj-KN-Fs9" collectionClass="NSMutableArray" id="XcO-K5-3Sk"/>
-                        <outletCollection property="MuscleSwitches" destination="LDq-fP-nsG" collectionClass="NSMutableArray" id="jcD-Ku-szX"/>
-                        <outletCollection property="MuscleSwitches" destination="46M-Fc-vgR" collectionClass="NSMutableArray" id="sib-pC-ksN"/>
-                        <outletCollection property="MuscleSwitches" destination="yQF-b4-XbC" collectionClass="NSMutableArray" id="TWx-Vh-38r"/>
-                        <outletCollection property="MuscleSwitches" destination="eI2-Z9-gVO" collectionClass="NSMutableArray" id="H47-I6-RxM"/>
+                        <outletCollection property="muscleSwitches" destination="vcj-KN-Fs9" collectionClass="NSMutableArray" id="XcO-K5-3Sk"/>
+                        <outletCollection property="muscleSwitches" destination="LDq-fP-nsG" collectionClass="NSMutableArray" id="jcD-Ku-szX"/>
+                        <outletCollection property="muscleSwitches" destination="46M-Fc-vgR" collectionClass="NSMutableArray" id="sib-pC-ksN"/>
+                        <outletCollection property="muscleSwitches" destination="yQF-b4-XbC" collectionClass="NSMutableArray" id="TWx-Vh-38r"/>
+                        <outletCollection property="muscleSwitches" destination="eI2-Z9-gVO" collectionClass="NSMutableArray" id="H47-I6-RxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lva-LF-e0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -449,6 +449,7 @@
                     <navigationItem key="navigationItem" title="Types of muscle groups" id="KqU-6l-amW"/>
                     <connections>
                         <outlet property="mainTableView" destination="pcX-Kg-Xc5" id="eXb-0i-sFu"/>
+                        <outlet property="sc" destination="VtU-0r-bX9" id="JI1-aD-dsI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByP-qg-lJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
