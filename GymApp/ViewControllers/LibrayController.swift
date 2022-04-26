@@ -42,7 +42,7 @@ class LibraryController: UITableViewController {
         case 2: return "Back"
         case 3: return "Legs"
         default:
-            return "Legs"
+            return "Biceps"
     }
     }
     
@@ -57,7 +57,7 @@ class LibraryController: UITableViewController {
         case 2: return back.count
         case 3: return legs.count
         default:
-            return legs.count
+            return biceps.count
         }
     }
 
@@ -69,7 +69,7 @@ class LibraryController: UITableViewController {
         case 2: return setForContentRows(indexPath: indexPath, triceps: back)
         case 3: return setForContentRows(indexPath: indexPath, triceps: legs)
         default:
-            return setForContentRows(indexPath: indexPath, triceps: legs)
+            return setForContentRows(indexPath: indexPath, triceps: biceps)
         }
         
         
@@ -85,4 +85,24 @@ class LibraryController: UITableViewController {
         cell.contentConfiguration = content
         return cell
     }
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let changeVC = segue.destination as? ChangeDetailController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        var selectedSection: [Exercise] = []
+        switch indexPath.section {
+        case 0: selectedSection = triceps
+        case 1: selectedSection = breast
+        case 2: selectedSection = back
+        case 3: selectedSection = legs
+        default:
+            selectedSection =  biceps
+        }
+        changeVC.exercise = selectedSection[indexPath.row]
+    }
 }
+
+

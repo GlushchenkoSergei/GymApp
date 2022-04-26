@@ -27,6 +27,14 @@ class FirlsController: UIViewController {
         showAlert(with: "In next update", and: "Скоро релиз ф-ци дневника")
     }
     
+    @IBAction func tapAboutUs(_ sender: Any) {
+        showAlert(with: "Приложение разработали", and: """
+Сергей Глущенко: t.me gl_sergeyy
+Василий Полторак: t.me ednzlo
+"""
+        )
+        
+    }
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default)

@@ -38,7 +38,7 @@ class ExercisesControllerNew: UIViewController, ExercisesControllerProtocol {
     
     private func selectExercise() {
         guard let titleSegment = sc.titleForSegment(at: sc.selectedSegmentIndex) else { return }
-        print(userDefaults.array(forKey: titleSegment))
+//        print(userDefaults.array(forKey: titleSegment))
         let muscleGroupStrings = userDefaults.array(forKey: titleSegment) as! [String]
         var muscleGroup = [MuscleGroup]()
         for muscle in muscleGroupStrings {
